@@ -1,1 +1,3 @@
-*.md
+MENTOR_LOG.md
+.venv/
+data/
