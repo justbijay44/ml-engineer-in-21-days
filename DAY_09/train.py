@@ -70,5 +70,6 @@ if __name__ == "__main__":
         X_train, X_val, y_train, y_val
     )
 
-    model_dir = Path("models").mkdir(exist_ok=True)
+    model_dir = Path("models")
+    model_dir.mkdir(exist_ok=True)
     joblib.dump(model, model_dir / "model.pkl")
