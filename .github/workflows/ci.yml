@@ -11,4 +11,5 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -r DAY_09/requirements.txt
+      - run: mkdir -p DAY_09/data && curl -o DAY_09/data/titanic.csv https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv
       - run: cd DAY_09 && python train.py
