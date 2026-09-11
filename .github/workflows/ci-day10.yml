@@ -1,0 +1,15 @@
+name: DAY10-ci
+
+on: [push]
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'    
+      - run: pip install -r DAY_10/requirements.txt
+      - run: mkdir -p DAY_10/data && curl -o DAY_10/data/sms.tsv https://raw.githubusercontent.com/justmarkham/pycon-2016-tutorial/master/data/sms.tsv
+      - run: cd DAY_10 && python train.py
