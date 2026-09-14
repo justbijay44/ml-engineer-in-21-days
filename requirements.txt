@@ -5,3 +5,6 @@ ipykernel
 scikit-learn
 torch
 torchvision
+fastapi
+uvicorn
+python-multipart
