@@ -1,4 +1,4 @@
-name: CI
+name: Day9-ci
 
 on: [push]
 
