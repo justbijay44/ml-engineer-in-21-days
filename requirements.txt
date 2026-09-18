@@ -14,3 +14,4 @@ datasets
 pillow
 kagglehub
 statsmodels
+lightgbm
