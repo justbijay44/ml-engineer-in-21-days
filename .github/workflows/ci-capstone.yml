@@ -1,0 +1,24 @@
+name: CAPSTONE_FRAUD_DETECTION
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  run_api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install -r CAPSTONE/requirements.txt 
+      - run: cd CAPSTONE && python src/train.py
+      - run: cd CAPSTONE && python -m pytest
+
+    services:
+      mongo: 
+        image: mongo:7.0
+        ports: 
+          - 27017:27017

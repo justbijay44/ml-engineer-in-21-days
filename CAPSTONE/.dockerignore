@@ -1,0 +1,4 @@
+notebooks/
+data/
+tests/
+__pycache__/
